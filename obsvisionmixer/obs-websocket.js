@@ -2352,7 +2352,8 @@ class Socket extends EventEmitter {
       let settled = false;
 
       debug('Attempting to connect to: %s', address);
-      this._socket = new WebSocket('ws://' + address);
+      //this._socket = new WebSocket('ws://' + address);
+      this._socket = new WebSocket('wss://' + address);
 
       // We only handle initial connection errors.
       // Beyond that, the consumer is responsible for adding their own `error` event listener.
